@@ -13,7 +13,7 @@ This repository uses [lcov_ex](https://github.com/dariodf/lcov_ex?tab=readme-ov-
 
 ## Set up
 
-See [`.github/workflows/elixir.yml`](./.github/workflows/elixir.yml) in this repository for a basic configuration.
+See [`.github/workflows/elixir.yml`](./.github/workflows/main.yml) in this repository for a basic configuration.
 
 ## Documentation
 
