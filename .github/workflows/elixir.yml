@@ -35,5 +35,9 @@ jobs:
         restore-keys: ${{ runner.os }}-mix-
     - name: Install dependencies
       run: mix deps.get
-    - name: Run tests
-      run: mix test
+    - name: Run tests with coverage
+      run: mix lcov
+    - uses: qltysh/qlty-action/coverage@ea1eaf434a27bf50cd544153084fbb11c52aaf84
+      with:
+        oidc: true
+        files: cover/lcov.info
