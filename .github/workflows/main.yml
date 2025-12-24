@@ -3,13 +3,16 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-name: Elixir CI
+name: Main
 
 on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * *"
   push:
-    branches: [ "main" ]
+    branches:
+      - main
   pull_request:
-    branches: [ "main" ]
 
 permissions:
   contents: read
