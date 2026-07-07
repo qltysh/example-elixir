@@ -35,7 +35,7 @@ jobs:
       run: mix deps.get
     - name: Run tests with coverage
       run: mix lcov
-    - uses: qltysh/qlty-action/coverage@ea1eaf434a27bf50cd544153084fbb11c52aaf84
+    - uses: qltysh/qlty-action/coverage@b413a89d8f3a8b36b9edd20b7ef1ad7ae0a7ac3a # version 2.2.2
       with:
         oidc: true
         files: cover/lcov.info
