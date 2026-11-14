@@ -25,9 +25,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v4.4.0
+      with:
+        persist-credentials: false
     - name: Set up Elixir
-      uses: erlef/setup-beam@v1
+      uses: erlef/setup-beam@v1.24.1
       with:
         elixir-version: '1.17.3'
         otp-version: '26.2.5'
@@ -35,7 +37,7 @@ jobs:
       run: mix deps.get
     - name: Run tests with coverage
       run: mix lcov
-    - uses: qltysh/qlty-action/coverage@b413a89d8f3a8b36b9edd20b7ef1ad7ae0a7ac3a # version 2.2.2
+    - uses: qltysh/qlty-action/coverage@v2.2.2
       with:
         oidc: true
         files: cover/lcov.info
